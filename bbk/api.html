@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>防爬和视频下载</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/icon.png">
+  <meta name="referrer" content="no-referrer">
+    
+    <link rel="preload" href="/assets/css/0.styles.bc436fd0.css" as="style"><link rel="preload" href="/assets/js/app.8e5a33d7.js" as="script"><link rel="preload" href="/assets/js/2.389a9f15.js" as="script"><link rel="preload" href="/assets/js/9.05b492f4.js" as="script"><link rel="prefetch" href="/assets/js/10.fd8fa845.js"><link rel="prefetch" href="/assets/js/3.1b30b60e.js"><link rel="prefetch" href="/assets/js/4.c584143c.js"><link rel="prefetch" href="/assets/js/5.092ab47a.js"><link rel="prefetch" href="/assets/js/6.f349f1b8.js"><link rel="prefetch" href="/assets/js/7.4eb04983.js"><link rel="prefetch" href="/assets/js/8.e5d8d9a4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.bc436fd0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/bbk/" class="nav-link router-link-active">步步高</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/bbk/" class="nav-link router-link-active">步步高</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>步步高</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/bbk/" class="sidebar-link">目录</a></li><li><a href="/bbk/api.html" class="active sidebar-link">防爬和视频下载</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/bbk/api.html#base接口" class="sidebar-link">base接口</a></li><li class="sidebar-sub-header"><a href="/bbk/api.html#手机端防范" class="sidebar-link">手机端防范</a></li><li class="sidebar-sub-header"><a href="/bbk/api.html#视频防盗链" class="sidebar-link">视频防盗链</a></li></ul></li><li><a href="/bbk/UI.html" class="sidebar-link">UI</a></li><li><a href="/bbk/Function.html" class="sidebar-link">功能点</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="防爬和视频下载"><a href="#防爬和视频下载" aria-hidden="true" class="header-anchor">#</a> 防爬和视频下载</h1> <h2 id="base接口"><a href="#base接口" aria-hidden="true" class="header-anchor">#</a> base接口</h2> <p><code>sign</code> <code>ts</code> <code>cookies session</code>完全没用上</p> <p>rid 只做了判空</p> <p>getList接口</p> <div class="language- extra-class"><pre class="language-text"><code>curl -H 'Host: x.bbkedu.com' -H 'Content-Type: application/json;charset=utf-8' -H 'Accept: application/json' -H 'Accept-Language: zh-Hans-CN;q=1, ja-JP;q=0.9' --data-binary '{&quot;asc&quot;:0,&quot;pageCount&quot;:&quot;10&quot;,&quot;page&quot;:&quot;1&quot;,&quot;pid&quot;:&quot;0&quot;,&quot;cpFlag&quot;:&quot;0&quot;,&quot;orderBy&quot;:0,&quot;specialId&quot;:&quot;230&quot;,&quot;rid&quot;:&quot;11&quot;,&quot;memId&quot;:&quot;11&quot;,&quot;ts&quot;:1563851156}' --compressed 'https://x.bbkedu.com//api/base/getGoodsList.do'
+</code></pre></div><h2 id="手机端防范"><a href="#手机端防范" aria-hidden="true" class="header-anchor">#</a> 手机端防范</h2> <ul><li>使用ssl pinning</li> <li>下一步也可以选择通讯全加密 就是改造成本大</li></ul> <h2 id="视频防盗链"><a href="#视频防盗链" aria-hidden="true" class="header-anchor">#</a> 视频防盗链</h2> <p>建议用<strong>referer</strong> 现在浏览器打开地址都能直接播放或者直接用curl命令都能下载</p> <p>建议后续使用<strong>七牛</strong>的<strong>视频鉴权</strong></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/24/2019, 3:10:22 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/bbk/" class="prev router-link-active">
+          目录
+        </a></span> <span class="next"><a href="/bbk/UI.html">
+          UI
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8e5a33d7.js" defer></script><script src="/assets/js/2.389a9f15.js" defer></script><script src="/assets/js/9.05b492f4.js" defer></script>
+  </body>
+</html>
